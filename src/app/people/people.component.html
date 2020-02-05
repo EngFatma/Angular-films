@@ -1,0 +1,30 @@
+
+<div class="container-fluid">
+    <h2 class="header text-center my-5">Trending Artists</h2>
+    <div class="row">
+
+        <!-- <div class="col-md-12">
+               
+            <div class="title d-flex justify-content-center  align-items-center my-5">
+
+                <h2>Trending Artists</h2>
+                <h3>Trending Artists</h3>
+
+            </div>
+        </div> -->
+
+        <div *ngFor="let movie of trendingPeople;let i = index" class="col-md-3 my-3">
+
+            <div class="movie position-relative my-3 pb-3" >
+
+                <img class="img-fluid" src="https://image.tmdb.org/t/p/w500/{{movie.profile_path == null ?movie.known_for.backdrop_path:movie.profile_path }}"  />
+                <h6 class="text-white my-3 px-2"> {{ getTitle(i)}} </h6>
+                <div class="vote">{{movie.popularity}} </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+

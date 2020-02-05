@@ -1,0 +1,214 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+$fontFamily:'Montserrat', sans-serif;
+$mainWidth:400px;
+$fontSize:16px;
+$bgColor:#131722;
+$lightBgColor:#24baef;
+$bgTransparent:rgba(36,186,239,.6);
+$fontColor:#fff;
+$borderColor:#a8a8a83d;
+$secondFontColor:#949cb0;
+$boderHeight:1px;
+
+
+
+body{
+    font-size:$fontSize !important ;
+    font-family: $fontFamily!important;
+    background-color: $bgColor!important;
+    color: $fontColor;
+}
+// navbar 
+.mainNav{
+    background-color: transparent!important;
+}
+.navbar-light .navbar-nav .nav-link {
+    color:$fontColor;
+}
+.active{
+    color:rgb(216, 22, 22)!important;
+    font-size: 18px!important;
+    font-weight: 700;
+}
+
+.social_icons i{
+    transition: transform .5s ease-in-out!important;
+}
+.social_icons i:hover{
+    transform :scale(1.45);
+    // color:rgb(216, 22, 22)!important
+}
+
+a,a:hover{
+    text-decoration: none!important;
+    color: $fontColor!important;
+}
+.vote{
+    position: absolute;
+    top: 0;
+    right: 30px;
+    background-color:$lightBgColor;
+    padding: 8px;
+    font-weight: 700;
+    color: $fontColor;
+}
+.brder{
+ 
+    height:$boderHeight;
+    background-color:$borderColor ;
+
+
+}
+
+.movie {
+    box-shadow: 0px 4px 8px $lightBgColor;
+   
+}
+
+.movie {
+
+    img{
+        height:250px;
+        width: 100%;
+    }
+}
+.star_icon{
+    margin-right: 3px;
+    color:rgb(216, 22, 22)!important;
+}
+// title 
+
+.title{
+    position: relative;
+    font-weight: 800;
+
+    h2{
+        color: #96959570 !important; 
+        font-size: 5rem !important; 
+        letter-spacing: 3px;
+        
+    }
+     h3{
+        position: absolute;
+        letter-spacing: 5px;
+        font-size: 2.5rem !important;
+        margin-top: .25rem;
+        color:#f1f1f1!important;
+    }
+
+}
+
+.header{
+    font-size: 5rem!important;
+    text-shadow: 2px 2px 2px $lightBgColor;
+//    color: #FFFFFF;
+}
+
+@media(max-width:1024px){
+    
+    .mainNav{
+        padding-top: 20px;   
+          }
+  .navbar-expand-sm .navbar-nav{
+      margin-left: 1rem!important;
+  }
+}
+
+
+@media(max-width:768px){
+    .navbar-expand-sm .navbar-nav{
+        margin-top: 12px!important;
+    }
+    .navbar-expand-sm .navbar-nav{
+        font-size: 13px;
+    }
+    .navbar-light .navbar-brand {
+        width: 18%;
+    }
+    .header {
+        font-size: 3.5rem !important;
+    }
+    .title{
+        h2{
+            font-size: 3rem !important;
+        }
+        h3{
+            font-size: 2rem !important;
+        }
+    }
+}
+
+@media(max-width:425px){
+
+    .mainNav{
+            padding-top: 20px;
+          
+    }
+    #collapsibleNavId ul{
+        padding-top: 20px;
+    }
+    .navbar-light .navbar-brand{
+        width:50%!important
+    }
+    .navbar-light .navbar-toggler-icon{
+        background-image: url(assets/images/iconfinder-icon.svg);
+    }
+    .navbar-light .navbar-toggler{
+        border: none;
+    }
+   
+    .social_icons{
+        width: 33%!important;
+        margin-top: 10px;
+        margin-left:8px!important
+    }
+
+    .header {
+        font-size: 2rem !important;
+    }
+    .title{
+        h2{
+            font-size: 1.8rem !important;
+        }
+        h3{
+            font-size: 1.1rem !important;
+        }
+    }
+}
+
+@media(max-width:375px){
+    .title{
+        h2{
+            font-size: 1.6rem !important;
+        }
+        h3{
+            font-size: .9rem !important;
+        }
+    }
+    .social_icons{
+        width: 33%!important;
+        margin-top: 10px;
+        margin-left:8px!important
+    }
+}
+
+@media(max-width:320px){
+    
+    .title{
+        h2{
+            font-size: 1.2rem !important;
+        }
+        h3{
+            font-size: .7rem !important;
+        }
+    }
+    .social_icons{
+        width: 33%!important;
+        margin-top: 10px;
+        margin-left:8px!important
+    }
+
+}
+

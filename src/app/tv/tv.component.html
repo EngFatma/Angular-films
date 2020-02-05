@@ -1,0 +1,26 @@
+<div class="container-fluid"> 
+   
+    <div class="row">
+         <div class="col-md-12">
+                        <!-- title  -->
+                    <div class="title d-flex justify-content-center  align-items-center my-5">
+                            <h2>Trending TV SERIES</h2>
+                            <h3>Trending TV SERIES</h3>
+                    </div>
+            </div>
+            <div *ngFor="let movie of trendingTv;let i=index" class="col-md-3 my-2">
+
+                <div class="movie position-relative my-3 pb-3">
+
+                    <img class="img-fluid" src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}"  />
+
+                    <h6 class="text-white my-2 px-2"> {{getTitle(i)}} </h6>
+                    <div class="vote">{{movie.vote_average}} </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div> 
+

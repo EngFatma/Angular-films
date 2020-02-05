@@ -1,0 +1,53 @@
+
+
+<div class="container my-5">
+    <!-- search area -->
+    <input [(ngModel)]="term" class="form-control mb-4 w-50 mx-auto">  
+
+    <div class="row ">
+        <!------------------- header area ----------------------->
+        <div class="col-md-4 my-5">
+            <div class="brder w-25"></div>
+                    <h2 class="text-white py-3">Popular movies <br> Right Now</h2>
+                    <p class="text-muted">Most Trending Movies this month</p>
+            <div class="brder w-100"></div>
+        </div>
+        <!--------------------------------------- films area ------------------------------------------>
+        <div *ngFor="let movie of trendingAll|search:term; let i = index" class="col-md-4 my-3">
+
+            <div *ngIf="movie" class="movie position-relative ">
+
+                <img class="img-fluid" src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}"  />
+
+            <div class="movie-info px-3 py-3">
+                    <h4 class="text-white"> {{getTitle(i)}} </h4>
+                    <i *ngFor="let star of movie.stars_avg" class="fa fa-star star_icon" ></i>
+                    <p class="my-2 text-muted">{{movie.overview|seemore:100}} </p>
+
+                    <button (click)="show(i)" class="btn btn-info my-2 oreBtn">see more</button>
+                    <p *ngIf="flag[i]"  class="extraInfo text-muted">
+                        {{trendingAll[i].overview}}
+                    </p>
+                
+            </div>
+            <!-- end movie info -->
+
+                <div class="vote">{{movie.vote_average}} </div>
+
+            </div>
+
+        </div>
+
+   
+    <!-------------------------------- start pagination ---------------------------------->
+    <div class="col-md-12 d-none d-md-block my-5 py-5 ">
+        <div class="d-flex justify-content-center ">
+            <i (click)='prev()' class="fas text-white fa-angle-double-left mt-3 paginate"></i>
+            <div  class="text-white p-3 paginate" *ngFor="let page of pages ;let ind =index" (click)="changeapage(ind)">{{page}} </div>
+            <i (click)='next()' class="fas text-white fa-angle-double-right mt-3 paginate"></i>
+        </div>
+    </div>
+
+</div>
+
+</div>

@@ -1,0 +1,57 @@
+
+
+<div class="container">
+
+         <!-- title  -->
+          <div class="title d-flex justify-content-center  align-items-center my-5">
+
+              <h2>CONTACT US</h2>
+              <h3>CONTACT US</h3>
+
+          </div>
+
+  <form [formGroup]="userData" (ngSubmit)="submitForm()">
+        <!-- start  input -->
+        <div class="form-group">
+          <input formControlName="userName" type="text" name="uName" id="name" class="form-control mb-1 mt-4" placeholder="User Name"
+            aria-describedby="helpId">
+            <div *ngIf="userData.controls.userName.touched && userData.controls.userName.errors!=null" class="text-muted alert alert-danger "> name is required , minimum length is 3 letters and maximum length is 30 letters </div>
+        </div>
+        <!-- end  input -->
+
+        <!-- start  input -->
+        <div class="form-group">
+          <input formControlName="userMail" type="email" name="uMail" id="mail" class="form-control mb-1 mt-4" placeholder="User Mail"
+            aria-describedby="helpId">
+          <div *ngIf="userData.controls.userMail.touched && userData.controls.userMail.errors!=null" class="text-muted alert alert-danger "> email is required , please enter a valid mail </div>
+        </div>
+        <!-- end  input -->
+
+        <!-- start  input -->
+        <div class="form-group">
+          <input formControlName="userAge" type="text" name="uAge" id="age" class="form-control  mb-1 mt-4" placeholder="User Age"
+            aria-describedby="helpId">
+            <div *ngIf="userData.controls.userAge.touched && userData.controls.userAge.errors!=null" class="text-muted alert alert-danger "> user age must be from 5 to 60 years </div>
+        </div>
+        <!-- end  input -->
+
+        <!-- start  input -->
+        <div class="form-group">
+          <input formControlName="userPassword" type="text" name="uPassword" id="pass" class="form-control  mb-1 mt-4"
+            placeholder="password" aria-describedby="helpId">
+            <div *ngIf="userData.controls.userPassword.touched && userData.controls.userPassword.errors!=null" class="text-muted alert alert-danger "> password is required </div>
+        </div>
+        <!-- end  input -->
+
+        <!-- start  input -->
+        <div class="form-group">
+          <textarea formControlName="userMessage" class="form-control  mb-1 mt-4" placeholder="Enter your message" name="uMessage"
+            id="message" rows="3"></textarea>
+        </div>
+        <!-- end  input -->
+
+        <button class="btn"[disabled]="userData.invalid" type="submit" id="submitBtn"> submit</button>
+
+  </form>
+
+</div>
